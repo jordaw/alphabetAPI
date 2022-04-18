@@ -10,35 +10,35 @@ class FalseTestCase(APITestCase):
         data = {
             "request": "abc"
         }
-        response = self.client.post("", data)
+        response = self.client.post("/api/alphabet/check", data)
         self.assertEqual(response.json()["response"], False)
     
     def test_false_alphanumeric(self):
         data = {
             "request": "vI0pajIMvdSjOfhcUuO1f5k9CEcbijd"
         }
-        response = self.client.post("", data)
+        response = self.client.post("/api/alphabet/check", data)
         self.assertEqual(response.json()["response"], False)
 
     def test_false_special_chars(self):
         data = {
             "request": "L&fqmez^WoM!ZghBcExB^XptQd^*pkQ"
         }
-        response = self.client.post("", data)
+        response = self.client.post("/api/alphabet/check", data)
         self.assertEqual(response.json()["response"], False)
 
     def test_false_all_chars(self):
         data = {
             "request": "&fSg44WPgG0zpKYeB*e1SQm6ZFOOj6m"
         }
-        response = self.client.post("", data)
+        response = self.client.post("/api/alphabet/check", data)
         self.assertEqual(response.json()["response"], False)
 
     def test_false_sentence(self):
         data = {
             "request": "The qu1ck brown fox jump$ ov3r the lazy d0g!"
         }
-        response = self.client.post("", data)
+        response = self.client.post("/api/alphabet/check", data)
         self.assertEqual(response.json()["response"], False)
 
     def test_false_book(self):
@@ -51,12 +51,12 @@ class FalseTestCase(APITestCase):
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa \
             qui officia deserunt mollit anim id est laborum"
         }
-        response = self.client.post("", data)
+        response = self.client.post("/api/alphabet/check", data)
         self.assertEqual(response.json()["response"], False)
 
     def test_false_blank(self):
         data = {
             "request": ""
         }
-        response = self.client.post("", data)
+        response = self.client.post("/api/alphabet/check", data)
         self.assertEqual(response.json()["response"], False)

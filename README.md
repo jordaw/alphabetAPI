@@ -5,7 +5,7 @@
 ## Pertitnent Files
 - Alphabet logic, GET/POST logic - **alphabet/api/views.py**
 - Test files for expected true/false inputs - **alphabet/api/tests**
-- Serializer to convert request data to JSON - **alphabet/api serializers.py**
+- Serializer to convert request data to JSON - **alphabet/api/serializers.py**
 - URL dispatcher, registers API application routes - **alphabet/api/urls.py**
 - Database object - **alphabet/api/models.py**
 

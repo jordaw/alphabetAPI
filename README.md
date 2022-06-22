@@ -2,7 +2,7 @@
 
 <p align="center">A simple <a href="https://www.django-rest-framework.org/"> Django REST</a> API that receives an input string, and determines if the string contains at least one of each letter of the alphabet.</p>
 
-## Pertitnent Files
+## Pertinent Files
 - Alphabet logic, GET/POST logic - **alphabet/api/views.py**
 - Test files for expected true/false inputs - **alphabet/api/tests**
 - Serializer to convert request data to JSON - **alphabet/api/serializers.py**
